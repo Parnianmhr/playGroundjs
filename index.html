@@ -108,16 +108,16 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
             in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </div>
-      <button class="button">export the current css</button>
-      <div class="control boxcss">
+      <button class="button" id="btn1">export the current css</button>
+      <div id="cssExport" class="control boxcss">
           <h2>Current CSS</h2>
           <ul>
-              <li>Font: <lable></lable>
-              <li>color: <lable></lable>
-              <li>background-color: <lable></lable>
-              <li>font-size: <lable></lable>
-              <li>line-height: <lable></lable>
-              <li>padding: <lable></lable>
+              <li>Font: <lable id="font"></lable>
+              <li>color: <lable id="color"></lable>
+              <li>background-color: <lable id="backcolor"></lable>
+              <li>font-size: <lable id="fonts"></lable>
+              <li>line-height: <lable id="lineh"></lable>
+              <li>padding: <lable id="padd"></lable>
           </ul>
       </div>
     </div>
@@ -137,7 +137,7 @@
                 $('#canvas').css('background-color', e.target.value);
             });
 
-            $('#textsize').keydown(function(e) {
+            $('#textsize').change(function(e) {
                 $('#canvas').css('font-size', e.target.value + 'px');
             });
 
@@ -148,7 +148,17 @@
             $('#textpadding').change(function(e) {
                 $('#canvas').css('padding', e.target.value + 'px');
             });
+
+            $("#btn1").click(function() {
+              document.getElementById("font").innerHTML = $("#canvas").css('font-family');
+              document.getElementById("color").innerHTML = $("#canvas").css('color');
+              document.getElementById("backcolor").innerHTML = document.getElementById("bgcolor").value;
+              document.getElementById("fonts").innerHTML = $("#canvas").css('font-size');
+              document.getElementById("lineh").innerHTML = $("#canvas").css('line-height');
+              document.getElementById("padd").innerHTML = $("#canvas").css('padding');
+            });
         });
+
     </script>
 </body>
 
