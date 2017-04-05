@@ -38,17 +38,26 @@
             list-style: none;
             padding: 0;
         }
+        .box {
+          font-family: verdana;
+          line-height: 15px;
+          border: 1px solid gray;
+          border-radius: 20px;
+          padding-left: 20px;
+          margin: 0 20px 20px 20px;
+        }
+
     </style>
     <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div id="container">
-        <h1>Color and font playground</h1>
+        <h1>Change the color and font playground</h1>
 
         <form>
             <div id="controls">
-                <div class="control">
+                <div class="control box">
                     <h2>Font</h2>
                     <ul>
                         <li><label><input type="radio" name="fontname" value="arial"> Arial</label></li>
@@ -58,12 +67,12 @@
                         <li><label><input type="radio" name="fontname" value="verdana"> Verdana</label></li>
                     </ul>
                 </div>
-                <div class="control">
+                <div class="control box">
                     <h2>Color</h2>
                     <p>Text: <input id="textcolor" type="text" name="textcolor" value="#000" size="7"></p>
                     <p>Background: <input id="bgcolor" type="text" name="bgcolor" value="#fff" size="7"></p>
                 </div>
-                <div class="control">
+                <div class="control box">
                     <h2>Spacing</h2>
                     <p>Text size: <input id="textsize" type="text" name="textsize" value="16" size="5"></p>
                     <p>Line height: <input id="lineheight" type="text" name="lineheight" value="18" size="5"></p>
